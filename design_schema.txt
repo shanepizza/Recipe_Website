@@ -1,0 +1,19 @@
+This file will hold some basic design guildlines I am planning to follow for the website. 
+
+
+naming conventions: 
+    HTML files: 
+    CSS files:
+    JS files: 
+
+
+
+
+PX: Is the exact number of pixels stated (Use for borders)
+Default: 
+REM: Default font size is 16px. Rem scales the root so all units down the tree will scale. (Use for fonts and spacing)
+Default: 
+EM: This is reletive to the parent. Nested, it multiplies. (Use for padding)
+Default: 
+%: Reletive to the parent size. Nested, it becomes a smaller quotient. (Use for widths)
+Defualt: 

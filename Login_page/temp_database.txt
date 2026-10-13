@@ -1,0 +1,15 @@
+alex.morgan@example.com,Maple!River482
+jamie.lee@example.com,Cloud#Garden731
+taylor.chen@example.com,Comet$Harbor926
+sam.rivera@example.com,Velvet!Pine305
+casey.patel@example.com,Orbit#Meadow614
+jordan.kim@example.com,Amber$Trail857
+morgan.diaz@example.com,Silver!Cedar293
+avery.brooks@example.com,Pixel#Sunset540
+quinn.foster@example.com,Willow$Breeze168
+reese.nguyen@example.com,Coral!Lantern472
+skyler.adams@example.com,Marble#Ocean839
+rowan.clark@example.com,Golden$Thistle216
+devon.ward@example.com,Crimson!Valley693
+parker.bell@example.com,Indigo#Meadow325
+finley.scott@example.com,Autumn$Comet781
