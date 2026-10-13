@@ -1,0 +1,343 @@
+/*Shared features such as font styles, colors, and general layout rules go here. */
+
+.page-container { 
+    background-color: #d4caca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/*
+The page container should not take up the whole screen
+*/
+
+.page-container-inner {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+
+    
+
+
+    width: 90%;
+    max-width: 1200px;
+    background-color: white;
+    min-height: 100vh;
+    border: 1px solid #000000;
+    grid-template-rows: auto 1fr auto;
+    overflow: auto;
+    
+    /* Center the page container 
+    margin: 0 10%;
+    */
+}
+
+.sitenotice-container {
+    grid-column: 1 / -1;
+    
+    width: 100%;
+    background-color: red;
+    height: 10px;
+    margin-top: 6px;
+}
+
+
+.description-header {
+    grid-column: 2 / -1;
+    
+    text-align: left;
+    
+    padding: 0 0 0 0;
+    border: 1px solid #000000;
+    max-width: 100%;
+    
+    
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; 
+}
+
+.left-column-start {
+    
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 500px;
+    background-color: #e0e0e0;
+    
+    border: 1px solid #000000;
+    margin-top: 20px;
+}
+
+.left-menu-list {
+    /* No underline*/
+    
+    padding: 0;
+}
+
+.left-menu-list li a {
+    text-decoration: none;
+    color: rgb(92, 92, 223);
+    
+}
+
+.left-menu-header {
+    border-bottom: 1px solid #000000;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    margin-right: 20px;
+}
+.left-menu-header h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.left-menu-nav {
+    padding-bottom: 6px;
+    margin: 0 0 6px 12px;
+}
+
+.left-menu-nav ul {
+    margin-left: 20px;
+}
+
+.main-content {
+    grid-column: 2 / -1;
+    padding: 20px;
+}
+
+
+
+.header-container div {
+    /* Add columns*/
+    
+    width: 100px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 20px;
+    border: 1px solid #000000;
+    margin: 10px 20px
+}
+
+
+
+
+
+.image {
+    display: block;
+    max-width: 90%;
+
+    height: auto;
+    margin: 10px auto;
+}
+
+.logo-image {
+    display: block;
+    max-height: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.sub-header-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 1fr 1fr auto;
+    gap: 10px;
+}
+
+.text-content {
+    grid-column: 1 ;
+    grid-row: 1 / 2;
+}
+.recipe-instructions {
+    grid-column: 1 ;
+    grid-row: 2 / 3;
+}
+
+    .right-sidebar-container {
+        grid-column: 2 / -1;
+        grid-row: 1 / 3;
+        width: 100%;
+        height: 500px;
+        background-color: #e0e0e0;
+        border: 1px solid #000000;
+        margin-top: 20px;
+}
+
+.right-sidebar-container h3 {
+    
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.video-container {
+    border: 1px solid #000000;
+    
+    padding: 10px;
+    margin: 10px;
+    margin-inline: auto;
+    width: 80%;
+    
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    
+}
+
+
+
+
+
+/*****************************************************************/
+
+/* *******************************Phone: place navigation, content, and sidebar in a single column. *************************************************/
+@media (max-width: 600px) {
+    .page-container-inner {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .page-container-inner > *,
+    .sub-header-content > * {
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .content-container {
+        overflow-wrap: anywhere;
+    }
+
+    .header-container header {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .logo-image {
+        max-width: 100%;
+    }
+
+    .sub-header-content {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .right-sidebar-container {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        height: auto;
+    }
+    /*.right-sidebar-container > * {
+        display: none;
+    }*/
+
+    .sub-header-content > .right-sidebar-container {
+        grid-row: 3;
+    }
+
+    .page-container-inner > *,
+    .page-container-inner > .right-sidebar-container {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    .left-column-start {
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .main-content {
+        padding: 12px;
+    }
+
+    .header-container div {
+        margin: 0;
+        width: calc((100% - 10px) / 2);
+        box-sizing: border-box;
+    }
+
+    .description-header h1 {
+        font-size: 1.75rem;
+    }
+}
+
+/***************************** Tablet: keep navigation beside the content and stack the sidebar below it. *************************************************/
+@media (600px < width <= 1024px) {
+    .page-container-inner {
+        grid-template-columns: 180px minmax(0, 1fr);
+    }
+
+    .page-container-inner > *,
+    .sub-header-content > * {
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .content-container {
+        overflow-wrap: anywhere;
+    }
+
+    .header-container header {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .header-container div {
+        margin: 0;
+    }
+
+    .logo-image {
+        max-width: 100%;
+    }
+
+    .sub-header-content {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .right-sidebar-container {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        height: auto;
+    }
+
+    .page-container-inner > .right-sidebar-container {
+        grid-column: 2 / -1;
+    }
+
+    .sub-header-content > .right-sidebar-container {
+        grid-row: 3;
+    }
+}
+
+
+
+/**************************************** PC: retain the original desktop layout. *****************************************************************/
+@media (width > 1024px) {
+    .page-container-inner {
+        width: 90%;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .sub-header-content {
+        grid-template-columns: 1fr 300px;
+        grid-template-rows: 1fr 1fr auto;
+    }
+
+    .main-content {
+        padding: 20px;
+        grid-template-columns: 1fr 1fr;
+
+    }
+    
+}
