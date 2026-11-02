@@ -5,8 +5,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Mac and Cheese Recipe</title>
-	<link rel="stylesheet" href="recipe.css">
-	<script src="script.js" defer></script>
+	<link rel="stylesheet" href="css%20files/recipe.css">
+	<link rel="stylesheet" href="css%20files/pie-chart.css">
+	<script src="scripts/script.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
+	<script src="scripts/pie-chart.js" defer></script>
 </head>
 <body>
 	<!-- put a header here -->
@@ -91,17 +94,23 @@
                                 <li>instruction step</li>
                             </ol>
                         </div> <!-- Close recipe-instructions -->
+                        
+                        <div class="pie-chart">
+                            <h2>Pie Chart</h2>
+                            <!-- Pie chart content goes here -->
+                            <canvas id="pie-chart-canvas"></canvas>
+                        </div> <!-- Close pie-chart -->
+
                     </div> <!-- Close sub-header-content -->
                 </main>
             </div><!-- Close content-container -->
             
-            
-            
-            
-            <div class="footer-container">
-            </div><!-- Close footer-container -->
         </div><!-- Close page-container-inner -->
         </div><!-- Close page-container -->
-    </div>
-</body>
+    </div><!-- Close outermost container -->
+    <div class="footer-container">
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </div><!-- Close footer-container -->
+</body><!-- Close body tag -->
+
 </html>

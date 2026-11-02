@@ -1,0 +1,23 @@
+/* Pie chart styles */
+
+
+.pie-chart {
+    grid-column: 1;
+    grid-row: 3;
+    padding: 20px;
+    background-color: #a17272;
+    border: 1px solid #020000;
+    border-radius: 6px;
+    margin: 20px 0;
+    max-width: 500px;
+    width: 100%;
+    max-height: 800px;
+    height: 100%;
+
+}
+
+@media (max-width: 600px) {
+    .pie-chart {
+        grid-row: auto;
+    }
+}
