@@ -46,6 +46,22 @@ const pieChart = new Chart(ctx, {
 
 
 
+                //Redraw the border between color families
+                //The line will simply redraw from the center of the chart at the start angle of each portion.
+                context.beginPath();
+                context.moveTo(x, y);
+                context.lineTo(x + Math.cos(startAngle) * drawRadius, y + Math.sin(startAngle) * drawRadius);
+                context.strokeStyle = arc.options.borderColor;
+                context.lineWidth = arc.options.borderWidth;
+                context.stroke();
+                
+
+
+
+
+
+
+
 
             });
 
@@ -70,10 +86,25 @@ const pieChart = new Chart(ctx, {
     },
     options: {
         responsive: true,
-        radius: '100%',
+        radius: '70%',
         plugins: {
             legend: {
                 position: 'top',
+                labels: {
+                    color: 'black',
+                    generateLabels(chart) {
+                        const items =
+                            Chart.overrides.pie.plugins.legend.labels.generateLabels(chart);
+
+                        return items.map(item => ({
+                            ...item,
+                            fillStyle: portions[item.index].vibrant,
+                            strokeStyle: portions[item.index].vibrant,
+                            
+                            
+                        }));
+                    }
+                }
             },
             tooltip: {
                 callbacks: {
