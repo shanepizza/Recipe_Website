@@ -1,0 +1,47 @@
+/*
+	Opt-in layout debugging styles. Add the "debug-mode" class to <body>
+	to enable these visual guides; remove it to restore the page's appearance.
+*/
+
+/* Give every element a subtle outline and tint so its bounds are visible. */
+body.debug-mode * {
+	outline: 1px solid rgba(255, 0, 0, 0.25) !important;
+	/* The tint can obscure original backgrounds; remove this declaration if needed. */
+	background-color: rgba(255, 0, 0, 0.02) !important;
+}
+
+/* Highlight major semantic landmarks with distinct outline colors. */
+body.debug-mode header {
+	outline: 2px solid #007bff !important; /* Blue: header */
+}
+
+body.debug-mode nav {
+	outline: 2px solid #28a745 !important; /* Green: navigation */
+}
+
+body.debug-mode main {
+	outline: 2px solid #6f42c1 !important; /* Purple: primary content */
+}
+
+body.debug-mode section,
+body.debug-mode article {
+	outline: 2px dashed #fd7e14 !important; /* Orange: content groupings */
+}
+
+body.debug-mode footer {
+	outline: 2px solid #17a2b8 !important; /* Teal: footer */
+}
+
+/* Mark likely flex/grid containers: inline-style checks and conventional classes. */
+body.debug-mode [style*="flex"],
+body.debug-mode .flex,
+body.debug-mode [style*="grid"],
+body.debug-mode .grid {
+	outline: 2px dotted #e83e8c !important; /* Pink: likely flex/grid layout */
+}
+
+/* Flag images with missing alt attributes or empty alt text for review. */
+body.debug-mode img:not([alt]),
+body.debug-mode img[alt=""] {
+	outline: 4px solid #dc3545 !important; /* Red: check image accessibility */
+}
