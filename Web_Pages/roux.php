@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
     
@@ -5,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Roux Recipe</title>
-	<link rel="stylesheet" href="recipe.css">
-	<script src="script.js" defer></script>
+	<link rel="stylesheet" href="../css%20files/recipe.css">
+	<script src="../scripts/script.js" defer></script>
 </head>
 <body>
 	<!-- put a header here -->
@@ -90,17 +91,17 @@
                     <div class="recipe-instructions">
                         <h2>Instructions</h2>
                         <ol id="instructions">
-                            <li>Over <a href="#Oven-top-heat-levels">medium-high heat</a>, melt salted butter in a saucepan.</li>
+                            <li>Over <a href="stove-top-heat-levels.php">medium-high heat</a>, melt salted butter in a saucepan.</li>
                             <li>Gradually whisk in ¼ cup all-purpose flour using a wooden spoon or whisk.</li>
-                            <li>Stir constantly for at least 5 minutes until the mixture is smooth and lightly <a href="#browning">golden</a> in color.</li>
-                            <li>Remove the saucepan from heat and let the roux <a href="#cooling">cool</a> slightly before using it to thicken your dish.</li>
+                            <li>Stir constantly for at least 5 minutes until the mixture is smooth and lightly golden in color.</li>
+                            <li>Remove the saucepan from heat and let the roux cool slightly before using it to thicken your dish.</li>
                             <li>Incorporate the roux into soups, stews, or sauces as needed, stirring constantly to avoid lumps.</li>
                         </ol>
                     </div><!-- Close recipe-instructions -->
 
                     <div class="video-container VIDEO" id="roux-video-container">
-                        <video width="560" height="315" controls preload="auto" poster="images/roux_video_poster.png">
-                            <source src="videos/roux-video.mp4" type="video/mp4">
+                        <video width="560" height="315" controls preload="auto" poster="../images/roux_video_poster.png">
+                            <source src="../videos/roux-video.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                         </video>
                     </div> <!-- Close VIDEO -->

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
     
@@ -5,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Mac and Cheese Recipe</title>
-	<link rel="stylesheet" href="recipe.css">
-	<script src="script.js" defer></script>
+	<link rel="stylesheet" href="../css%20files/recipe.css">
+	<script src="../scripts/script.js" defer></script>
 </head>
 <body>
 	<!-- put a header here -->
@@ -21,7 +22,7 @@
             <div class="hamburger-menu">
             </div>
             <div class="site-logo">
-                 <a href="index.html"><img class="logo-image" src="images/logo.jpeg" alt="site logo"></a>
+                <a href="index.php"><img class="logo-image" src="../images/logo.jpeg" alt="site logo"></a>
             </div>
             <div class="search-bar">
             </div>
@@ -45,8 +46,8 @@
                             <h3>Contents</h3>
                         </div>
                             <ul class="left-menu-list">
-                                <li><a href="#">Recipe</a></li>
-                                <li><a href="#">Ingedients</a></li>
+                                <li><a href="#">Table of Contents</a></li>
+                                <li><a href="#">TODO</a></li>
                                 <li><a href="#">Substitutions</a></li>
                                 <li><a href="#">Variations</a></li>
                             </ul>
@@ -57,48 +58,50 @@
             <div class="content-container">
                 <main class="main-content">
                     <header class="description-header">
-		                <h1>Mac and Cheese Recipe</h1>
+		                <h1>Index</h1>
 	                </header>
                     <div class="sub-header-content">
                         <div class="right-sidebar-container">
-                            <img class="image" src="images\Original_Mac_n_Cheese_.jpg" alt="Mac n Cheese">
+                            <!-- Image placeholder -->
                             <h3>Under construction</h3>
                         </div><!-- Close right-sidebar-container -->
                         <div class="text-content">
-                            <div class="recipe-content">
-                                <h2>Ingredients</h2>
-                                <ul id="ingredients">
-                                    <li>8 ounces elbow macaroni</li>
-                                    <h2 class="inter-ingredient-header">Cheese Sauce</h2>
-                                    <li>2 Tablespoons salted butter</li>
-                                    <li>2 Tablespoons all-purpose flour</li>
-                                    <li>½ teaspoon sea salt</li>
-                                    <li>¼ teaspoon garlic powder (optional but recommended)</li>
-                                    <li>1 cup  whole milk</li>
-                                    <li>¼ cup sour cream or Greek yogurt</li>
-                                    <li>8 ounces shredded cheddar cheese (2 cups)</li>
-
-
-                                </ul>
+                            <div class="index-intro">
+                                <p>
+                                    Welcome to the index page. Here 
+                                    you can find links to all the pages 
+                                    created so far.
+                                </p>
                             </div>
+                            <div class="index-content">
+                                <h2>Pages created so far</h2>
+                                <ul id="ingredients">
+                                    <li><a href="stove-top-heat-levels.php">Stove Top Heat Levels</a></li>
+                                    <li><a href="index.php">Index</a></li>
+                                    <li><a href="template.php">Template</a></li>
+                                    <li><a href="roux.php">Roux</a></li>
+                                    <li><a href="mac_n_cheese_recipe.php">Mac and Cheese Recipe</a></li>
+                                </ul>
+                            </div><!-- Close index-content -->
                         </div> <!-- Close text-content -->
                         <div class="recipe-instructions">
-                            <h2>Instructions</h2>
-                            <ol id="instructions">
-                                <li>Cook the elbow macaroni according to the package instructions. Drain and set aside.</li>
-                                <li>In a medium <a href="#pots-n-pans">saucepan</a>, melt the butter over 
-                                    <a href="stove-top-heat-levels.html">medium heat</a>. 
-                                    Stir in the flour and cook the <a href="roux.html">roux</a> 
-                                    for 1-2 minutes until lightly golden.</li>
-                                <li>Gradually whisk in the milk and cook until the sauce thickens, about 5-7 minutes.</li>
-                                <li>Remove from heat and stir in the sour cream and shredded cheddar cheese until smooth.</li>
-                                <li>Combine the cooked macaroni with the cheese sauce. Serve immediately.</li>
-                            </ol>
+                            <h2>TODO:</h2>
+                            <ul id="instructions">
+                                <li>Add a search bar to the header</li>
+                                <li>Add a footer to the page</li>
+                                <li>Add images to all pages</li>
+                                <li>Add search bar to index page</li>
+                                <li>Add logo to all pages</li>
+                                <li>Improve mobile responsiveness</li>
+                                <li>Define Scope</li>
+                                <li>Prevent feature creep</li>
+                                <li>Create a "sorry, this page is not ready" template</li>
+                            </ul>
                         </div>
                     </div> <!-- Close sub-header-content -->
                 </main>
             </div><!-- Close content-container -->
-
+            
             
             
             

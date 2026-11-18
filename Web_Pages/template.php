@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
     
@@ -5,8 +6,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Mac and Cheese Recipe</title>
-	<link rel="stylesheet" href="recipe.css">
-	<script src="script.js" defer></script>
+	<link rel="stylesheet" href="../css%20files/recipe.css">
+	<link rel="stylesheet" href="../css%20files/pie-chart.css">
+	<script src="../scripts/script.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
+	<script src="../scripts/pie-chart.js" defer></script>
 </head>
 <body>
 	<!-- put a header here -->
@@ -21,7 +25,7 @@
             <div class="hamburger-menu">
             </div>
             <div class="site-logo">
-                <a href="index.html"><img class="logo-image" src="images/logo.jpeg" alt="site logo"></a>
+                <a href="index.php"><img class="logo-image" src="../images/logo.jpeg" alt="site logo"></a>
             </div>
             <div class="search-bar">
             </div>
@@ -45,8 +49,8 @@
                             <h3>Contents</h3>
                         </div>
                             <ul class="left-menu-list">
-                                <li><a href="#">Table of Contents</a></li>
-                                <li><a href="#">TODO</a></li>
+                                <li><a href="#">Recipe</a></li>
+                                <li><a href="#">Ingedients</a></li>
                                 <li><a href="#">Substitutions</a></li>
                                 <li><a href="#">Variations</a></li>
                             </ul>
@@ -57,57 +61,57 @@
             <div class="content-container">
                 <main class="main-content">
                     <header class="description-header">
-		                <h1>Index</h1>
+		                <h1>Template</h1>
 	                </header>
                     <div class="sub-header-content">
                         <div class="right-sidebar-container">
-                            <!-- Image placeholder -->
                             <h3>Under construction</h3>
                         </div><!-- Close right-sidebar-container -->
                         <div class="text-content">
-                            <div class="index-intro">
-                                <p>
-                                    Welcome to the index page. Here 
-                                    you can find links to all the pages 
-                                    created so far.
-                                </p>
-                            </div>
-                            <div class="index-content">
-                                <h2>Pages created so far</h2>
+                            <div class="recipe-content">
+                                <h2>Ingredients</h2>
                                 <ul id="ingredients">
-                                    <li><a href="stove-top-heat-levels.html">Stove Top Heat Levels</a></li>
-                                    <li><a href="index.html">Index</a></li>
-                                    <li><a href="template.html">Template</a></li>
-                                    <li><a href="roux.html">Roux</a></li>
-                                    <li><a href="mac_n_cheese_recipe.html">Mac and Cheese Recipe</a></li>
+                                    <li>list item</li>
+                                    <h2 class="inter-ingredient-header">Sub header</h2>
+                                    <li>list item</li>
+                                    <li>list item</li>
+                                    <li>list item</li>
+                                    <li>list item</li>
+                                    <li>list item</li>
+                                    <li>list item</li>
+                                    <li>list item</li>
+
+
                                 </ul>
-                            </div><!-- Close index-content -->
+                            </div>
                         </div> <!-- Close text-content -->
                         <div class="recipe-instructions">
-                            <h2>TODO:</h2>
-                            <ul id="instructions">
-                                <li>Add a search bar to the header</li>
-                                <li>Add a footer to the page</li>
-                                <li>Add images to all pages</li>
-                                <li>Add search bar to index page</li>
-                                <li>Add logo to all pages</li>
-                                <li>Improve mobile responsiveness</li>
-                                <li>Define Scope</li>
-                                <li>Prevent feature creep</li>
-                                <li>Create a "sorry, this page is not ready" template</li>
-                            </ul>
-                        </div>
+                            <h2>Instructions</h2>
+                            <ol id="instructions">
+                                <li>instruction step</li>
+                                <li>instruction step</li>
+                                <li>instruction step</li>
+                                <li>instruction step</li>
+                                <li>instruction step</li>
+                            </ol>
+                        </div> <!-- Close recipe-instructions -->
+                        
+                        <div class="pie-chart">
+                            <h2>Pie Chart</h2>
+                            <!-- Pie chart content goes here -->
+                            <canvas id="pie-chart-canvas"></canvas>
+                        </div> <!-- Close pie-chart -->
+
                     </div> <!-- Close sub-header-content -->
                 </main>
             </div><!-- Close content-container -->
             
-            
-            
-            
-            <div class="footer-container">
-            </div><!-- Close footer-container -->
         </div><!-- Close page-container-inner -->
         </div><!-- Close page-container -->
-    </div>
-</body>
+    </div><!-- Close outermost container -->
+    <div class="footer-container">
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </div><!-- Close footer-container -->
+</body><!-- Close body tag -->
+
 </html>

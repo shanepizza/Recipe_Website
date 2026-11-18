@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
     
@@ -5,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Mac and Cheese Recipe</title>
-	<link rel="stylesheet" href="recipe.css">
-	<script src="script.js" defer></script>
+	<link rel="stylesheet" href="../css%20files/recipe.css">
+	<script src="../scripts/script.js" defer></script>
 </head>
 <body>
 	<!-- put a header here -->
@@ -21,7 +22,7 @@
             <div class="hamburger-menu">
             </div>
             <div class="site-logo">
-                 <a href="index.html"><img class="logo-image" src="images/logo.jpeg" alt="site logo"></a>
+                 <a href="index.php"><img class="logo-image" src="../images/logo.jpeg" alt="site logo"></a>
             </div>
             <div class="search-bar">
             </div>
@@ -61,7 +62,7 @@
 	                </header>
                     <div class="sub-header-content">
                         <div class="right-sidebar-container">
-                            <img class="image" src="images/gas_stove.jpg" alt="image of a gas stove">
+                            <img class="image" src="../images/gas_stove.jpg" alt="image of a gas stove">
                             <h3>Under construction</h3>
                         </div><!-- Close right-sidebar-container -->
                     <div class="text-content">
