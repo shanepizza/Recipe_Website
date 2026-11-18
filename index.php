@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,16 +19,16 @@
             $greeting = "Hello! Today is " . date("l, F j, Y") . ".";
             echo "<p>" . $greeting . "</p>";
 
-            $folder = "html_files/";
-            $htmlFiles = glob($folder . "*.html");
-             if ($htmlFiles) {
-                sort($htmlFiles);
+            $folder = "Web_Pages/";
+            $phpFiles = glob($folder . "*.php");
+             if ($phpFiles) {
+                sort($phpFiles);
                 echo '<ul>';
-                foreach ($htmlFiles as $file) {
-                    // Get just the filename without the folder path (e.g., "about.html")
+                foreach ($phpFiles as $file) {
+                    // Get just the filename without the folder path (e.g., "about.php")
                     $fileName = basename($file);
                     
-                    // Optional: Make a cleaner display title (e.g., "about.html" -> "About")
+                    // Optional: Make a cleaner display title (e.g., "about.php" -> "About")
                     $displayTitle = ucfirst(pathinfo($fileName, PATHINFO_FILENAME));
 
                     // Output the HTML list item and anchor tag
@@ -36,7 +37,7 @@
                 echo '</ul>';
             } else {
                 echo '<ul>';
-                echo "<li>No HTML files found in this folder.</li>";
+                echo "<li>No PHP files found in this folder.</li>";
                 echo '</ul>';
             }
 

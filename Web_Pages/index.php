@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
     
@@ -21,7 +22,7 @@
             <div class="hamburger-menu">
             </div>
             <div class="site-logo">
-                <a href="index.html"><img class="logo-image" src="images/logo.jpeg" alt="site logo"></a>
+                <a href="index.php"><img class="logo-image" src="../images/logo.jpeg" alt="site logo"></a>
             </div>
             <div class="search-bar">
             </div>
@@ -75,11 +76,11 @@
                             <div class="index-content">
                                 <h2>Pages created so far</h2>
                                 <ul id="ingredients">
-                                    <li><a href="stove-top-heat-levels.html">Stove Top Heat Levels</a></li>
-                                    <li><a href="index.html">Index</a></li>
-                                    <li><a href="template.html">Template</a></li>
-                                    <li><a href="roux.html">Roux</a></li>
-                                    <li><a href="mac_n_cheese_recipe.html">Mac and Cheese Recipe</a></li>
+                                    <li><a href="stove-top-heat-levels.php">Stove Top Heat Levels</a></li>
+                                    <li><a href="index.php">Index</a></li>
+                                    <li><a href="template.php">Template</a></li>
+                                    <li><a href="roux.php">Roux</a></li>
+                                    <li><a href="mac_n_cheese_recipe.php">Mac and Cheese Recipe</a></li>
                                 </ul>
                             </div><!-- Close index-content -->
                         </div> <!-- Close text-content -->

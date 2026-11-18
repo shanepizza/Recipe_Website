@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
     
@@ -6,7 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Mac and Cheese Recipe</title>
 	<link rel="stylesheet" href="../css%20files/recipe.css">
-	<script src="scripts/script.js" defer></script>
+	<link rel="stylesheet" href="../css%20files/pie-chart.css">
+	<script src="../scripts/script.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
+	<script src="../scripts/pie-chart.js" defer></script>
 </head>
 <body>
 	<!-- put a header here -->
@@ -21,7 +25,7 @@
             <div class="hamburger-menu">
             </div>
             <div class="site-logo">
-                 <a href="index.html"><img class="logo-image" src="images/logo.jpeg" alt="site logo"></a>
+                <a href="index.php"><img class="logo-image" src="../images/logo.jpeg" alt="site logo"></a>
             </div>
             <div class="search-bar">
             </div>
@@ -57,26 +61,25 @@
             <div class="content-container">
                 <main class="main-content">
                     <header class="description-header">
-		                <h1>Mac and Cheese Recipe</h1>
+		                <h1>Template</h1>
 	                </header>
                     <div class="sub-header-content">
                         <div class="right-sidebar-container">
-                            <img class="image" src="images\Original_Mac_n_Cheese_.jpg" alt="Mac n Cheese">
                             <h3>Under construction</h3>
                         </div><!-- Close right-sidebar-container -->
                         <div class="text-content">
                             <div class="recipe-content">
                                 <h2>Ingredients</h2>
                                 <ul id="ingredients">
-                                    <li>8 ounces elbow macaroni</li>
-                                    <h2 class="inter-ingredient-header">Cheese Sauce</h2>
-                                    <li>2 Tablespoons salted butter</li>
-                                    <li>2 Tablespoons all-purpose flour</li>
-                                    <li>½ teaspoon sea salt</li>
-                                    <li>¼ teaspoon garlic powder (optional but recommended)</li>
-                                    <li>1 cup  whole milk</li>
-                                    <li>¼ cup sour cream or Greek yogurt</li>
-                                    <li>8 ounces shredded cheddar cheese (2 cups)</li>
+                                    <li>list item</li>
+                                    <h2 class="inter-ingredient-header">Sub header</h2>
+                                    <li>list item</li>
+                                    <li>list item</li>
+                                    <li>list item</li>
+                                    <li>list item</li>
+                                    <li>list item</li>
+                                    <li>list item</li>
+                                    <li>list item</li>
 
 
                                 </ul>
@@ -85,27 +88,30 @@
                         <div class="recipe-instructions">
                             <h2>Instructions</h2>
                             <ol id="instructions">
-                                <li>Cook the elbow macaroni according to the package instructions. Drain and set aside.</li>
-                                <li>In a medium saucepan, melt the butter over 
-                                    <a href="stove-top-heat-levels.html">medium heat</a>. 
-                                    Stir in the flour and cook the <a href="roux.html">roux</a> 
-                                    for 1-2 minutes until lightly golden.</li>
-                                <li>Gradually whisk in the milk and cook until the sauce thickens, about 5-7 minutes.</li>
-                                <li>Remove from heat and stir in the sour cream and shredded cheddar cheese until smooth.</li>
-                                <li>Combine the cooked macaroni with the cheese sauce. Serve immediately.</li>
+                                <li>instruction step</li>
+                                <li>instruction step</li>
+                                <li>instruction step</li>
+                                <li>instruction step</li>
+                                <li>instruction step</li>
                             </ol>
-                        </div>
+                        </div> <!-- Close recipe-instructions -->
+                        
+                        <div class="pie-chart">
+                            <h2>Pie Chart</h2>
+                            <!-- Pie chart content goes here -->
+                            <canvas id="pie-chart-canvas"></canvas>
+                        </div> <!-- Close pie-chart -->
+
                     </div> <!-- Close sub-header-content -->
                 </main>
             </div><!-- Close content-container -->
-
             
-            
-            
-            <div class="footer-container">
-            </div><!-- Close footer-container -->
         </div><!-- Close page-container-inner -->
         </div><!-- Close page-container -->
-    </div>
-</body>
+    </div><!-- Close outermost container -->
+    <div class="footer-container">
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </div><!-- Close footer-container -->
+</body><!-- Close body tag -->
+
 </html>
