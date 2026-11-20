@@ -1,6 +1,10 @@
 /*
 	Opt-in layout debugging styles. Add the "debug-mode" class to <body>
 	to enable these visual guides; remove it to restore the page's appearance.
+
+    use the console command
+    document.body.classList.toggle('debug-mode'); 
+    to enable or disable debug mode dynamically.
 */
 
 /* Give every element a subtle outline and tint so its bounds are visible. */

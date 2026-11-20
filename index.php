@@ -20,7 +20,9 @@
             echo "<p>" . $greeting . "</p>";
 
             $folder = "Web_Pages/";
+            $includeFolder = "includes/";
             $phpFiles = glob($folder . "*.php");
+            $otherphpfiles = glob($includeFolder . "*.php");
              if ($phpFiles) {
                 sort($phpFiles);
                 echo '<ul>';
@@ -38,6 +40,21 @@
             } else {
                 echo '<ul>';
                 echo "<li>No PHP files found in this folder.</li>";
+                echo '</ul>';
+            }
+
+            if ($otherphpfiles) {
+                sort($otherphpfiles);
+                echo '<ul>';
+                foreach ($otherphpfiles as $file) {
+                    $fileName = basename($file);
+                    $displayTitle = ucfirst(pathinfo($fileName, PATHINFO_FILENAME));
+                    echo '<li><a href="' . htmlspecialchars($file) . '">' . htmlspecialchars($displayTitle) . '</a></li>';
+                }
+                echo '</ul>';
+            } else {
+                echo '<ul>';
+                echo "<li>No PHP files found in the includes folder.</li>";
                 echo '</ul>';
             }
 
