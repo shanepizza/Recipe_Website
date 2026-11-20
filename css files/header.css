@@ -1,0 +1,116 @@
+/* Notes 
+   - The header height is controlled by the --header-height variable.
+   - The search bar has adjustable width and button size using CSS variables.
+   - The user menu and hamburger menu are flex containers for alignment.
+
+   - The Search bar should disapear when the screen width is below 500px;
+
+
+
+*/
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    --header-height: 100px; /* Example height, adjust as needed */
+    height: var(--header-height);
+    background-color: #bebcbc; /* Example background color, adjust as needed */
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header .logo {
+    height: calc(var(--header-height) * 0.8);
+    width: auto;
+    object-fit: contain;
+}
+
+/* all images in the header */
+.header img {
+    max-height: calc(var(--header-height)*0.8);
+}
+
+.header .user-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.user-menu img {
+    max-height: calc(var(--header-height)*0.5);
+}
+
+
+/* Search bar styling */
+.search-bar {
+    display: flex;
+    align-items: center;
+    height: calc(var(--header-height)*0.5);
+    margin: auto;
+    --searchbarheight: 1.8rem;
+    --searchbarwidth: 50vw;
+    --button-width: 5rem;
+    height: calc(var(--searchbarheight));
+    width: var(--searchbarwidth);
+    max-width: 400px; /* Adjust as needed */
+    min-width: 250px; /* Adjust as needed */
+    
+    /*Creating a pill-shaped search bar */
+    border: 1px solid #dfe1e5;
+    border-radius: 9999px;      /* Creates the full pill curve */
+    overflow: hidden;           /* Clips inner corners so they don't poke out */
+    background-color: #ffffff;
+}
+
+.search-bar form {
+    display: flex;
+    width: 100%; 
+}
+
+.search-bar input {
+    height: calc(var(--searchbarheight)*1);
+    flex: 1;
+    border: none;
+    outline: none; /* Removes the default focus outline */
+    padding: 12px 16px;
+    background: transparent;
+}
+
+.search-bar button {
+    /*making the pill-shaped button */
+    border: none;
+    /*background: transparent; /*I don't think I want the background transparent */
+    background-color: #f1f3f4; /* Example background color for the button */
+    padding: 0 18px;
+    cursor: pointer;
+    flex: 0 0 var(--button-width);
+    border-left: 1px solid #dfe1e5;
+}
+
+/*Part of the pill-shaped search bar */
+.search-bar button:hover {
+    background-color: #e5e8ea; /* Example hover background color */
+}
+
+.search-bar:focus-within {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-color: transparent;
+}
+/*End of search bar styling */
+
+.user-menu {
+    margin-left: auto;
+}
+.hamburger-menu {
+
+}
