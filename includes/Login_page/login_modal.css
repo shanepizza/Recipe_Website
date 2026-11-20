@@ -1,0 +1,99 @@
+/* Dialog Box Container */
+.modal {
+  border: none;
+  border-radius: 8px;
+  padding: 0;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  font-family: inherit;
+}
+
+/* Dimmed Background Overlay */
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+.modal-content {
+  padding: 24px;
+}
+
+/* Header & Close Button */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Form Layout */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #2b6cb0;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #2b6cb0;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #2c5282;
+}
+
+/* Error Message Styling */
+.error-banner {
+  background-color: #fed7d7;
+  color: #9b2c2c;
+  padding: 10px 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
